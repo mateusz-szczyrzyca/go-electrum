@@ -1,4 +1,4 @@
-module github.com/checksum0/go-electrum
+module github.com/mateusz-szczyrzyca/go-electrum
 
 go 1.18
 
