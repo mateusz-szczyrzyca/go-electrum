@@ -42,7 +42,7 @@ func (s *Client) ServerDonation(ctx context.Context) (string, error) {
 	return resp.Result, err
 }
 
-type host struct {
+type Host struct {
 	TCPPort uint16 `json:"tcp_port,omitempty"`
 	SSLPort uint16 `json:"ssl_port,omitempty"`
 }
@@ -56,7 +56,7 @@ type ServerFeaturesResp struct {
 // "server.add_peer".
 type ServerFeaturesResult struct {
 	GenesisHash   string          `json:"genesis_hash"`
-	Hosts         map[string]host `json:"hosts"`
+	Hosts         map[string]Host `json:"hosts"`
 	ProtocolMax   string          `json:"protocol_max"`
 	ProtocolMin   string          `json:"protocol_min"`
 	Pruning       bool            `json:"pruning,omitempty"`
